@@ -1,0 +1,40 @@
+[build]
+  command = "vite build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[dev]
+  framework = "vite"
+  command = "vite"
+  targetPort = 5173         # Vite dev server
+  port = 8888               # Netlify proxy (final local URL)
+  autoLaunch = true
+
+# SPA fallback
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# (Optional) loosen CORS for local function calls
+[[headers]]
+  for = "/.netlify/functions/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Headers = "*"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+
+# 🗓️ Weekly summary of dishes (already working)
+[[scheduled.functions]]
+  name = "weekly-dishes-post"
+  schedule = "0 20 * * 0" # Sunday 8 PM UTC ≈ Monday 9 AM NZT
+
+# 🕓 Daily summary of catches
+[[scheduled.functions]]
+  name = "fb-daily-roundup"
+  schedule = "0 19 * * *"
+
+# 🏆 Weekly leaderboard update
+[[scheduled.functions]]
+  name = "weekly-leaderboard-post"
+  schedule = "0 20 * * 0" # Sunday 8 PM UTC ≈ Monday 9 AM NZT

@@ -1,0 +1,109 @@
+import { createClient } from '@supabase/supabase-js'
+
+const supabase = createClient(
+  process.env.VITE_SUPABASE_URL,
+  process.env.SUPABASE_SERVICE_ROLE_KEY
+)
+
+export const main = async () => {
+  try {
+    const nowUTC = new Date()
+    const end = new Date(Date.UTC(nowUTC.getUTCFullYear(), nowUTC.getUTCMonth(), nowUTC.getUTCDate(), 11, 0, 0))
+    const start = new Date(end)
+    start.setUTCDate(end.getUTCDate() - 1)
+    const startUTC = start.toISOString()
+    const endUTC = end.toISOString()
+    console.log('📅 UTC range for NZ yesterday:', startUTC, '→', endUTC)
+
+    const { data: claims, error } = await supabase
+      .from('claims')
+      .select(`
+        id,
+        species_slug,
+        thumb_url,
+        first_time,
+        created_at,
+        profiles(display_name)
+      `)
+      .gte('created_at', startUTC)
+      .lt('created_at', endUTC)
+      .order('created_at', { ascending: true })
+
+    if (error) throw error
+    if (!claims?.length) return { statusCode: 200, body: 'No claims from yesterday.' }
+
+    // === Summary text ===
+    const speciesCounts = claims.reduce((m, c) => {
+      m[c.species_slug] = (m[c.species_slug] || 0) + 1
+      return m
+    }, {})
+    const summary = Object.entries(speciesCounts)
+      .map(([k, v]) => `${k} ×${v}`)
+      .join(', ')
+
+    const byDiver = claims.reduce((m, c) => {
+      const name = c.profiles?.display_name || 'Unknown diver'
+      m[name] = m[name] || []
+      m[name].push(c.species_slug)
+      return m
+    }, {})
+    const perDiver = Object.entries(byDiver)
+      .map(([d, s]) => `${d}: ${s.join(', ')}`)
+      .join('\n')
+
+    const caption = [
+      `🎣 Fish Bingo – Daily Roundup`,
+      `Total claims: ${claims.length}`,
+      `Highlights: ${summary}`,
+      '',
+      perDiver,
+      '',
+      'See more at https://fishbingo.netlify.app/latest 🐠',
+      '#spearfishing #nz #fundies #fishbingo'
+    ].join('\n')
+
+    // === Upload thumbnails ===
+    const thumbs = claims
+      .map(c => c.thumb_url)
+      .filter(Boolean)
+      .slice(0, 20)
+
+    const uploaded = []
+    for (const url of thumbs) {
+      const uploadRes = await fetch(
+        `https://graph.facebook.com/v24.0/${process.env.FB_PAGE_ID}/photos?published=false`,
+        {
+          method: 'POST',
+          body: new URLSearchParams({
+            access_token: process.env.FB_PAGE_TOKEN,
+            url
+          })
+        }
+      )
+      const uploadJson = await uploadRes.json()
+      if (uploadJson.id) uploaded.push({ media_fbid: uploadJson.id })
+      else console.warn('⚠️ Upload failed for', url, uploadJson)
+    }
+
+    // === Compose final post ===
+    const feedParams = new URLSearchParams({
+      access_token: process.env.FB_PAGE_TOKEN,
+      message: caption
+    })
+    uploaded.forEach((m, i) => {
+      feedParams.append(`attached_media[${i}]`, JSON.stringify(m))
+    })
+
+    const postRes = await fetch(`https://graph.facebook.com/v24.0/${process.env.FB_PAGE_ID}/feed`, {
+      method: 'POST',
+      body: feedParams
+    })
+    const postJson = await postRes.json()
+
+    console.log('✅ FB post result:', postJson)
+    return { statusCode: 200, body: JSON.stringify(postJson) }
+  } catch (err) {
+    console.error('💥 Error posting to Facebook:', err)
+    return { statusCode: 500, body: JSON.stringify(err, null, 2) }
+  }
+}

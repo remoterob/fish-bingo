@@ -1,0 +1,22 @@
+[
+  { "slug":"bonus-month-august",    "name":"[Bonus] August row",    "points":150 },
+  { "slug":"bonus-month-september", "name":"[Bonus] September row", "points":200 },
+  { "slug":"bonus-month-october",   "name":"[Bonus] October row",   "points":250 },
+  { "slug":"bonus-month-november",  "name":"[Bonus] November row",  "points":300 },
+  { "slug":"bonus-month-december",  "name":"[Bonus] December row",  "points":350 },
+  { "slug":"bonus-month-january",   "name":"[Bonus] January row",   "points":400 },
+  { "slug":"bonus-month-february",  "name":"[Bonus] February row",  "points":450 },
+  { "slug":"bonus-month-march",     "name":"[Bonus] March row",     "points":500 },
+  { "slug":"bonus-month-april",     "name":"[Bonus] April row",     "points":550 },
+
+  { "slug":"bonus-evergreen-weedline-wonders", "name":"[Bonus] Weedline Wonders", "points":350 },
+  { "slug":"bonus-evergreen-pelagic-posse",    "name":"[Bonus] Pelagic posse",    "points":250 },
+  { "slug":"bonus-evergreen-shore-dive",       "name":"[Bonus] Shore dive succulents", "points":500 },
+  { "slug":"bonus-evergreen-south-island",     "name":"[Bonus] South Island Sweethearts", "points":500 },
+  { "slug":"bonus-evergreen-bluewater",        "name":"[Bonus] Bluewater Beasties", "points":1000 },
+  { "slug":"bonus-evergreen-kids",             "name":"[Bonus] One for the kids", "points":750 },
+  { "slug":"bonus-evergreen-big3",             "name":"[Bonus] The Big 3", "points":750 },
+  { "slug":"bonus-evergreen-monsters",         "name":"[Bonus] Monsters of the Deep", "points":1000 },
+  { "slug":"bonus-evergreen-estuary",          "name":"[Bonus] Estuarians", "points":750 },
+  { "slug":"bonus-evergreen-creepy-crawlies",  "name":"[Bonus] Creepy crawlies", "points":750 }
+]

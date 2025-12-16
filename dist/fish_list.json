@@ -1,0 +1,310 @@
+[
+  {
+    "name": "Billfish",
+    "slug": "Billfish",
+    "points": 1000,
+    "image": "fish/Billfish.jpg"
+  },
+  {
+    "name": "Blue Cod",
+    "slug": "bluecod",
+    "points": 300,
+    "image": "fish/bluecod.jpg"
+  },
+  {
+    "name": "Blue Mao Mao",
+    "slug": "blue-mao-mao",
+    "points": 100,
+    "image": "fish/blue-mao-mao.jpg"
+  },
+  {
+    "name": "Blue Moki",
+    "slug": "bluemoki",
+    "points": 200,
+    "image": "fish/bluemoki.jpg"
+  },
+  {
+    "name": "Butterfish",
+    "slug": "butterfish",
+    "points": 100,
+    "image": "fish/butterfish.jpg"
+  },
+  {
+    "name": "Catfish",
+    "slug": "Catfish",
+    "points": 400,
+    "image": "fish/Catfish.jpg"
+  },
+    {
+    "name": "Elephant Fish",
+    "slug": "ElephantFish",
+    "points": 1000,
+    "image": "fish/elephant-fish.jpg"
+  },
+  {
+    "name": "Flounder",
+    "slug": "Flounder",
+    "points": 400,
+    "image": "fish/Flounder.jpg"
+  },
+  {
+    "name": "Giant Boarfish",
+    "slug": "GiantBoarfish",
+    "points": 600,
+    "image": "fish/GiantBoarfish.jpg"
+  },
+  {
+    "name": "Golden Snapper",
+    "slug": "GoldenSnapper",
+    "points": 800,
+    "image": "fish/GoldenSnapper.jpg"
+  },
+  {
+    "name": "Gurnard",
+    "slug": "Gurnard",
+    "points": 600,
+    "image": "fish/Gurnard.jpg"
+  },
+  {
+    "name": "Hapuka",
+    "slug": "hapuka",
+    "points": 1000,
+    "image": "fish/hapuka.jpg"
+  },
+  {
+    "name": "John Dory",
+    "slug": "JohnDory",
+    "points": 400,
+    "image": "fish/JohnDory.jpg"
+  },
+  {
+    "name": "Kahawai",
+    "slug": "kahawai",
+    "points": 200,
+    "image": "fish/kahawai.jpg"
+  },
+  {
+    "name": "Kingfish",
+    "slug": "Kingfish",
+    "points": 200,
+    "image": "fish/kingfish.jpg"
+  },
+{
+    "name": "Kingfish over 15kg",
+    "slug": "kingfish-over-15kg",
+    "points": 400,
+    "image": "fish/kingfish-over-15kg.jpg"
+  }, 
+ {
+    "name": "Kingfish over 30kg",
+    "slug": "kingfish-over-30kg",
+    "points": 600,
+    "image": "fish/kingfish-over-30kg.jpg"
+  },
+  {
+    "name": "Koheru",
+    "slug": "koheru",
+    "points": 200,
+    "image": "fish/koheru.jpg"
+  },
+  {
+    "name": "Leather Jacket",
+    "slug": "Leather-Jacket",
+    "points": 100,
+    "image": "fish/Leather-Jacket.jpg"
+  },
+  {
+    "name": "Mahi Mahi",
+    "slug": "mahimahi",
+    "points": 1000,
+    "image": "fish/mahimahi.jpg"
+  },
+  {
+    "name": "Mullet",
+    "slug": "mullet",
+    "points": 300,
+    "image": "fish/mullet.jpg"
+  },
+  {
+    "name": "Octopus",
+    "slug": "Octopus",
+    "points": 400,
+    "image": "fish/Octopus.jpg"
+  },
+  {
+    "name": "Pack horse cray",
+    "slug": "pack-horse-cray",
+    "points": 300,
+    "image": "fish/pack-horse-cray.jpg"
+  },
+  {
+    "name": "Paua",
+    "slug": "paua",
+    "points": 200,
+    "image": "fish/paua.jpg"
+  },
+  {
+    "name": "Paua - Yellow Foot",
+    "slug": "paua-yellow-foot",
+    "points": 200,
+    "image": "fish/paua-yellow-foot.jpg"
+  },
+  {
+    "name": "Pigfish",
+    "slug": "pigfish",
+    "points": 100,
+    "image": "fish/pigfish.jpg"
+  },
+{
+    "name": "Pink Mao Mao",
+    "slug": "pink-mao-mao",
+    "points": 300,
+    "image": "fish/pink-mao-mao.jpg"
+  },
+{
+    "name": "Parore",
+    "slug": "parore",
+    "points": 100,
+    "image": "fish/parore.jpg"
+  },
+  
+  {
+    "name": "Porae",
+    "slug": "porae",
+    "points": 100,
+    "image": "fish/porae.jpg"
+  },
+  {
+    "name": "Red Cray",
+    "slug": "red-cray",
+    "points": 200,
+    "image": "fish/red-cray.jpg"
+  },
+  {
+    "name": "Red mullet",
+    "slug": "red-mullet",
+    "points": 100,
+    "image": "fish/red-mullet.jpg"
+  },
+  {
+    "name": "Scallop",
+    "slug": "Scallop",
+    "points": 100,
+    "image": "fish/scallop.jpg"
+  },
+  {
+    "name": "Scorpion Fish",
+    "slug": "Scorpion Fish",
+    "points": 400,
+    "image": "fish/Scorpion Fish.jpg"
+  },
+  {
+    "name": "Snapper",
+    "slug": "snapper",
+    "points": 200,
+    "image": "fish/snapper.jpg"
+  },
+  {
+    "name": "Snapper over 5 kg",
+    "slug": "snapper-over-5kg",
+    "points": 300,
+    "image": "fish/snapper-over-5kg.jpg"
+  },
+   {
+    "name": "Snapper over 10kg",
+    "slug": "snapper-over-10kg",
+    "points": 600,
+    "image": "fish/snapper-over-10kg.jpg"
+  },	
+   {
+    "name": "Sole",
+    "slug": "Sole",
+    "points": 400,
+    "image": "fish/sole.jpg"
+  },	
+ {
+    "name": "Spanish Lobster",
+    "slug": "spanish-lobster",
+    "points": 600,
+    "image": "fish/spanish-lobster.jpg"
+    },
+
+    {
+    "name": "Squid",
+    "slug": "Squid",
+    "points": 400,
+    "image": "fish/Squid.jpg"
+  },
+  {
+    "name": "Star Gazer",
+    "slug": "Star Gazer",
+    "points": 400,
+    "image": "fish/Star Gazer.jpg"
+  },
+  {
+    "name": "Tarakihi",
+    "slug": "tarakihi",
+    "points": 400,
+    "image": "fish/tarakihi.jpg"
+  },
+  {
+    "name": "Trevally",
+    "slug": "trevally",
+    "points": 200,
+    "image": "fish/trevally.jpg"
+  },
+  {
+    "name": "Trevally over 3kg",
+    "slug": "Trevally over 3kg",
+    "points": 400,
+    "image": "fish/Trevally over 3kg.jpg"
+  },
+  {
+    "name": "Trumpeter",
+    "slug": "trumpeter",
+    "points": 400,
+    "image": "fish/trumpeter.jpg"
+  },
+  {
+    "name": "Tuna - Albacore",
+    "slug": "Tuna - Albacore",
+    "points": 600,
+    "image": "fish/Tuna - Albacore.jpg"
+  },
+  {
+    "name": "Tuna - Skippie",
+    "slug": "Tuna - Skippie",
+    "points": 400,
+    "image": "fish/Tuna - Skippie.jpg"
+  },
+  {
+    "name": "Tuna - Yellow Fin",
+    "slug": "Tuna - Yellow Fin",
+    "points": 1000,
+    "image": "fish/Tuna - Yellow Fin.jpg"
+  },
+  {
+    "name": "Tuna - Blue Fin",
+    "slug": "Tuna - bluefin",
+    "points": 1000,
+    "image": "fish/Tuna - bluefin.jpg"
+  },
+  {
+    "name": "Warehou",
+    "slug": "Warehou",
+    "points": 600,
+    "image": "fish/Warehou.jpg"
+  }, 
+  {
+    "name": "Perform a rescue",
+    "slug": "rescue",
+    "points": 500,
+    "image": "fish/rescue.jpg"
+  },
+  {
+    "name": "Share 3 dishes",
+    "slug": "Dishes",
+    "points": 500,
+    "image": "fish/chefs hat.jpg"
+  }
+]
